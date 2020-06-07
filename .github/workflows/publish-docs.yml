@@ -26,11 +26,16 @@ jobs:
       - name: Generate documentation
         run: |
           python -m sphinx.cmd.build -b markdown docs docs/_build
+          echo 1
           ls docs/_build/_api/
+          echo 2
           ls docs/_build/
+          echo 3
           ls docs/images/
+          echo 4
           mv docs/_build/_api/* docs/_build/
           ls docs/_build/
+          echo 5
           mv docs/images/* docs/_build/
           ls docs/_build/
 
