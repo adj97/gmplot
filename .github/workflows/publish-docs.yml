@@ -27,6 +27,7 @@ jobs:
         run: |
           python -m sphinx.cmd.build -b markdown docs docs/_build
           mv docs/_build/_api/* docs/_build/
+          mv docs/images/* docs/_build/
 
       - name: Publish to GitHub Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@1.0.0
