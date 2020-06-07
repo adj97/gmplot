@@ -26,8 +26,13 @@ jobs:
       - name: Generate documentation
         run: |
           python -m sphinx.cmd.build -b markdown docs docs/_build
+          ls docs/_build/_api/
+          ls docs/_build/
+          ls docs/images/
           mv docs/_build/_api/* docs/_build/
+          ls docs/_build/
           mv docs/images/* docs/_build/
+          ls docs/_build/
 
       - name: Publish to GitHub Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@1.0.0
